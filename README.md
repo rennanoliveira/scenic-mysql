@@ -1,41 +1,41 @@
 # Scenic::Mysql
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/scenic/mysql`. To experiment with that code, run `bin/console` for an interactive prompt.
+Scenic-Mysql adds a Mysql Adapter to (scenic)[https://github.com/thoughtbot/scenic]
 
-TODO: Delete this and the text above, and describe your gem
+## Installing
 
-## Installation
-
-Add this line to your application's Gemfile:
+Add to your `Gemfile`:
 
 ```ruby
+gem 'scenic'
 gem 'scenic-mysql'
 ```
 
-And then execute:
+Then `bundle install`.
 
-    $ bundle
+## Configuring scenic to use the Mysql adapter
 
-Or install it yourself as:
+```ruby
+# config/initializers/scenic.rb
+Scenic.configure do |config|
+  config.adapter = Scenic::Adapters::Mysql.new
+end
+```
 
-    $ gem install scenic-mysql
+And that's all!
 
-## Usage
+## Caveats
 
-TODO: Write usage instructions here
+Mysql does not offer support for materialized views, so any calls to materialized views
+will either result in `false`, or raise a `Scenic::Adapters::Mysql::MaterializedViewsNotSupportedError`
 
-## Development
+## About
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+scenic-mysql is currently maintained by [Rennan Oliveira] and [Abraão Miranda].
+ 
+This gem is merely a Mysql adapter implementation to the awesome (scenic)[https://github.com/thoughtbot/scenic] project,
+and in no way claims to have any direct relation with its maintainers.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/scenic-mysql.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+[Rennan Oliveira]: https://github.com/rennanoliveira
+[Abraão Miranda]: https://github.com/abraaomiranda
 
