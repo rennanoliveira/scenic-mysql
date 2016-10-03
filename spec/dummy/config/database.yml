@@ -1,0 +1,10 @@
+development: &default
+  adapter: mysql2
+  database: dummy_development
+  encoding: utf8
+  pool: 5
+  username: root
+
+test:
+  <<: *default
+  database: dummy_test

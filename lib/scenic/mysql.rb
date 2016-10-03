@@ -1,7 +1,3 @@
-require "scenic/mysql/version"
+require 'scenic/mysql/version'
+require 'scenic/adapters/mysql'
 
-module Scenic
-  module Mysql
-    # Your code goes here...
-  end
-end
