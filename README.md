@@ -1,6 +1,6 @@
 # Scenic::Mysql
 
-Scenic-Mysql adds a Mysql Adapter to (scenic)[https://github.com/thoughtbot/scenic]
+Scenic-Mysql adds a Mysql Adapter to [scenic](https://github.com/thoughtbot/scenic)
 
 ## Installing
 
@@ -33,7 +33,7 @@ will either result in `false`, or raise a `Scenic::Adapters::Mysql::Materialized
 
 scenic-mysql is currently maintained by [Rennan Oliveira] and [Abraão Miranda].
  
-This gem is merely a Mysql adapter implementation to the awesome (scenic)[https://github.com/thoughtbot/scenic] project,
+This gem is merely a Mysql adapter implementation to the awesome [scenic](https://github.com/thoughtbot/scenic) project,
 and in no way claims to have any direct relation with its maintainers.
 
 [Rennan Oliveira]: https://github.com/rennanoliveira
